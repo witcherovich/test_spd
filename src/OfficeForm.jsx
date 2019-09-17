@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { addOffice, editOffice, setInitialFormState, setFormField } from './actionCreators';
@@ -53,10 +54,18 @@ class OfficeForm extends Component {
 			<div className="OfficeForm">
 				{isFormOpen && <form onSubmit={this.handleSubmitForm}>
 					<div>
-						<input className="OfficeForm__form_input" type="text" name="country" value={country} onChange={this.handleInputChange} />
+						<select name="country" value={country} onChange={this.handleInputChange}>
+							<option value="USA">USA</option>
+							<option value="Canada">Canada</option>
+							<option value="Ukraine">Ukraine</option>
+						</select>
 						<input className="OfficeForm__form_input" type="text" name="stateOrProvince" value={stateOrProvince} onChange={this.handleInputChange} />
 						<input className="OfficeForm__form_input" type="text" name="postalCode" value={postalCode} onChange={this.handleInputChange} />
-						<input className="OfficeForm__form_input" type="text" name="city" value={city} onChange={this.handleInputChange} />
+						<select name="city" value={city} onChange={this.handleInputChange}>
+							<option value="New York">New York</option>
+							<option value="Toronto">Toronto</option>
+							<option value="Kiev">Kiev</option>
+						</select>
 						<input className="OfficeForm__form_input" type="text" name="streetAddress" value={streetAddress} onChange={this.handleInputChange} />
 						<input className="OfficeForm__form_input" type="text" name="address2" value={address2} onChange={this.handleInputChange} />
 					</div>
@@ -88,6 +97,21 @@ const mapDispatchToProps = dispatch =>
 		editOffice,
 		setInitialFormState,
 		setFormField
-	}, dispatch)
+	}, dispatch);
+
+OfficeForm.propTypes = {
+	office: PropTypes.shape({
+		country: PropTypes.oneOf(['USA', 'Canada', 'Ukraine']).isRequired,
+		stateOrProvince: PropTypes.string.isRequired,
+		postalCode: PropTypes.string.isRequired,
+		city: PropTypes.oneOf(['New York', 'Toronto', 'Kiev']).isRequired,
+		streetAddress: PropTypes.string.isRequired,
+		address2: PropTypes.string.isRequired,
+		phone: PropTypes.string.isRequired,
+		fax: PropTypes.string.isRequired,
+		email: PropTypes.string.isRequired,
+		officeType: PropTypes.bool
+	}).isRequired
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(OfficeForm);

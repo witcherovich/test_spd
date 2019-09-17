@@ -2,10 +2,10 @@ import { SET_INITIAL_FORM_STATE, SET_FORM_STATE, SET_FORM_FIELD } from '../actio
 
 const initialFormState = {
 	id: null,
-	country: '',
+	country: 'USA',
 	stateOrProvince: '',
 	postalCode: '',
-	city: '',
+	city: 'New York',
 	streetAddress: '',
 	address2: '',
 	phone: '',
