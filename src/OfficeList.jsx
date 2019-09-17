@@ -23,7 +23,7 @@ class OfficeList extends Component {
 
 const mapStateToProps = state => {
 	return {
-		offices: state
+		offices: state.offices
 	}
 }
 

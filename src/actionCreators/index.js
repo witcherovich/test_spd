@@ -1,3 +1,4 @@
+// Office actions and actionCreators
 export const ADD_OFFICE = 'ADD_OFFICE';
 export const EDIT_OFFICE = 'EDIT_OFFICE';
 export const REMOVE_OFFICE = 'REMOVE_OFFICE';
@@ -28,3 +29,24 @@ export function removeOffice(officeId) {
 		}
 	}
 }
+
+
+// Office form const and actionCreators
+export const SET_INITIAL_FORM_STATE = 'SET_INITIAL_FORM_STATE';
+export const SET_FORM_STATE = 'SET_FORM_STATE';
+
+export function setInitialFormState() {
+	return {
+		type: SET_FORM_STATE
+	}
+}
+
+export function setFormState(office) {
+	return {
+		type: SET_FORM_STATE,
+		payload: {
+			office
+		}
+	}
+}
+
