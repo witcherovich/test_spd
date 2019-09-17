@@ -27,8 +27,18 @@ class App extends Component {
               Panel
             </div>
             <div className="App__body_content_left">
-              <OfficeForm />
-              <OfficeList />
+              <div className="App__title">
+                <span className="App__title_big">OFFICES</span> <span className="App__title_big App__title_big_grey">| COMPANY INFO</span>
+              </div>
+              <div className="App__description">
+                <span>Updating your location and contact information helps you appeal to regional investors and service providers.</span>
+              </div>
+              <hr className="App__horizontal_line_dotten" />
+              <div className="App__office">
+                <OfficeForm />
+                <OfficeList />
+              </div>
+              <hr className="App__horizontal_line_dotten" />
               <div>Footer</div>
             </div>
           </div>
