@@ -23,9 +23,13 @@ export default function OfficeItem(props) {
 		}
 	}
 
+	function handleEditOffice() {
+		props.editOffice(props.office);
+	}
+
 	return (
 		<div className="OfficeItem">
-			{id} {country} <button onClick={handleRemoveOffice}>Remove</button>
+			{id} {country} <button onClick={handleRemoveOffice}>Remove</button> <button onClick={handleEditOffice}>Edit</button>
 		</div>
 	);
 }
