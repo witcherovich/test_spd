@@ -1,0 +1,97 @@
+.OfficeForm__content {
+	width: 100%;
+}
+
+.OfficeForm__content_form {
+	display: flex;
+	justify-content: space-between;
+	height: 281px;
+	border-radius: 2px;
+	border: solid 1px #d7dce2;
+	background-color: #ffffff;
+	padding: 15px 32px 34px 10px;
+	box-sizing: border-box;
+}
+
+.OfficeForm__form_column_wrapper {
+	display: flex;
+	justify-content: space-between;
+	width: 40%;
+}
+
+.OfficeForm__form_column {
+	display: flex;
+	flex-direction: column;
+}
+
+.OfficeForm__form_row {
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	margin-bottom: 8px;
+}
+
+.OfficeForm__form_label {
+	font-family: OpenSans;
+	font-size: 14px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1.14;
+	letter-spacing: 0.4px;
+	color: #53687e;
+}
+
+.OfficeForm__text_style {
+	font-family: OpenSans;
+	font-size: 14px;
+	font-weight: normal;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1;
+	letter-spacing: 0.4px;
+	color: #334152;
+}
+
+.OfficeForm__form_field {
+	width: 191px;
+	height: 32px;
+	border-radius: 2px;
+	border: solid 1px #d8dde3;
+	box-sizing: border-box;
+	margin-left: 13px;
+}
+
+.OfficeForm__form_checkbox_wrapper {
+	display: flex;
+	align-items: center;
+	width: 191px;
+	border-radius: 2px;
+	margin-left: 10px;
+}
+
+.OfficeForm__form_checkbox {
+	margin: 0 8px 0 0;
+}
+
+.OfficeForm__btn {
+	margin-left: 10px;
+	height: 24px;
+	border-radius: 4px;
+	border: solid 1px #53687e;
+	background-color: #ffffff;
+}
+
+.OfficeForm__style_primary {
+	border: none;
+	border-radius: 2px;
+	background-color: #2888d1;
+	font-family: OpenSans;
+	font-size: 14px;
+	font-weight: bold;
+	font-style: normal;
+	font-stretch: normal;
+	line-height: 1;
+	letter-spacing: 0.4px;
+	color: #ffffff;
+}
