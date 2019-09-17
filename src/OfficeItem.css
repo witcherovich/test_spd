@@ -1,0 +1,51 @@
+.OfficeItem {
+	height: 120px;
+	border-radius: 2px;
+	border: solid 1px #d7dce2;
+	background-color: #ffffff;
+	padding: 13px 33px;
+	box-sizing: border-box;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 16px;
+}
+
+.OfficeItem__text {
+	font-family: OpenSans;
+	font-size: 14px;
+	line-height: 1.29;
+	letter-spacing: 0.4px;
+	color: #334152;
+}
+
+.OfficeItem__text_bold {
+	font-weight: 600;
+	font-family: FontAwesome;
+}
+
+.OfficeItem__column_wrapper {
+	display: flex;
+}
+
+.OfficeItem__row {
+	display: flex;
+	justify-content: flex-end;
+}
+
+.OfficeItem__label {
+	margin-right: 15px;
+}
+
+.OfficeItem__office_inf {
+	width: 245px;
+}
+
+.OfficeItem__column_margin_left {
+	margin-left: 64px;
+}
+
+.OfficeItem__btn_normal {
+	border-radius: 2px;
+	border: solid 1px #d8dde3;
+	background-color: #f7f8fa;
+}

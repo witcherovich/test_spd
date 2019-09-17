@@ -34,9 +34,6 @@
 .OfficeForm__form_label {
 	font-family: OpenSans;
 	font-size: 14px;
-	font-weight: normal;
-	font-style: normal;
-	font-stretch: normal;
 	line-height: 1.14;
 	letter-spacing: 0.4px;
 	color: #53687e;
@@ -45,9 +42,6 @@
 .OfficeForm__text_style {
 	font-family: OpenSans;
 	font-size: 14px;
-	font-weight: normal;
-	font-style: normal;
-	font-stretch: normal;
 	line-height: 1;
 	letter-spacing: 0.4px;
 	color: #334152;
@@ -75,11 +69,14 @@
 }
 
 .OfficeForm__btn {
-	margin-left: 10px;
 	height: 24px;
 	border-radius: 4px;
 	border: solid 1px #53687e;
 	background-color: #ffffff;
+}
+
+.OfficeForm__margin_left {
+	margin-left: 10px;	
 }
 
 .OfficeForm__style_primary {

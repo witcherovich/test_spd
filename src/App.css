@@ -77,7 +77,7 @@
   color: #b7bdc4;
 }
 
-.App__description {
+.App__text_normal {
   font-family: OpenSans;
   font-size: 14px;
   font-weight: normal;
@@ -88,7 +88,28 @@
   color: #334152;
 }
 
+.App__text_bold {
+  font-family: OpenSans;
+  font-size: 14px;
+  font-weight: bold;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1;
+  letter-spacing: 0.4px;
+  color: #53687e;
+}
+
 .App__horizontal_line_dotten {
   border: 1px dotted #b7bdc5;
   margin: 35px 0;
 }
+
+.App__office_row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.App__office_margin_bottom {
+  margin-bottom: 18px;
+}
+

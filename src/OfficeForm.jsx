@@ -7,10 +7,6 @@ import { addOffice, editOffice, setInitialFormState, setFormField } from './acti
 import './OfficeForm.css';
 
 class OfficeForm extends Component {
-	state = {
-		isFormOpen: true
-	};
-
 	handleInputChange = e => {
 		const target = e.target;
 		const value = target.type === 'checkbox' ? target.checked : target.value;
@@ -33,7 +29,7 @@ class OfficeForm extends Component {
 
 	handleCancelClick = e => {
 		e.preventDefault();
-		// this.setState({ isFormOpen: false });
+		this.props.closeForm();
 		this.props.setInitialFormState();
 	}
 
@@ -50,12 +46,11 @@ class OfficeForm extends Component {
 			email, 
 			officeType 
 		} = this.props.office;
-		const isFormOpen = this.state.isFormOpen;
 
 		return (
 			<div className="OfficeForm">
 				<div className="OfficeForm__content">
-					{isFormOpen && <form className="OfficeForm__content_form OfficeForm__text_style" onSubmit={this.handleSubmitForm}>
+					<form className="OfficeForm__content_form OfficeForm__text" onSubmit={this.handleSubmitForm}>
 						<div className="OfficeForm__form_column">
 							<div className="OfficeForm__form_row">
 								<div className="OfficeForm__form_label">*Country:</div>
@@ -116,11 +111,11 @@ class OfficeForm extends Component {
 							<div className="OfficeForm__form_column">
 								<div className="OfficeForm__form_row">
 									<button className="OfficeForm__btn" onClick={this.handleCancelClick}>Cancel</button>
-									<input className="OfficeForm__btn OfficeForm__style_primary" type="submit" value="Save" />
+									<input className="OfficeForm__btn OfficeForm__margin_left OfficeForm__style_primary" type="submit" value="Save" />
 								</div>
 							</div>
 						</div>
-					</form>}
+					</form>
 				</div>
 			</div>
 		);

@@ -1,7 +1,4 @@
 import React, { Component } from 'react';
-import { bindActionCreators } from 'redux';
-import { connect } from 'react-redux';
-import { removeOffice, setFormState } from './actionCreators';
 
 import OfficeItem from './OfficeItem';
 
@@ -21,16 +18,4 @@ class OfficeList extends Component {
   }
 }
 
-const mapStateToProps = state => {
-	return {
-		offices: state.offices
-	}
-}
-
-const mapDispatchToProps = dispatch => 
-	bindActionCreators({
-		removeOffice: removeOffice,
-		editOffice: setFormState
-	}, dispatch)
-
-export default connect(mapStateToProps, mapDispatchToProps)(OfficeList);
+export default OfficeList;
