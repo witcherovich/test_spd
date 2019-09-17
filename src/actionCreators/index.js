@@ -34,10 +34,11 @@ export function removeOffice(officeId) {
 // Office form const and actionCreators
 export const SET_INITIAL_FORM_STATE = 'SET_INITIAL_FORM_STATE';
 export const SET_FORM_STATE = 'SET_FORM_STATE';
+export const SET_FORM_FIELD = 'SET_FORM_FIELD';
 
 export function setInitialFormState() {
 	return {
-		type: SET_FORM_STATE
+		type: SET_INITIAL_FORM_STATE
 	}
 }
 
@@ -46,6 +47,15 @@ export function setFormState(office) {
 		type: SET_FORM_STATE,
 		payload: {
 			office
+		}
+	}
+}
+
+export function setFormField(field) {
+	return {
+		type: SET_FORM_FIELD,
+		payload: {
+			field
 		}
 	}
 }

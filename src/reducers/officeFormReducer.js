@@ -1,6 +1,7 @@
-import { SET_INITIAL_FORM_STATE, SET_FORM_STATE } from '../actionCreators';
+import { SET_INITIAL_FORM_STATE, SET_FORM_STATE, SET_FORM_FIELD } from '../actionCreators';
 
 const initialFormState = {
+	id: null,
 	country: '',
 	stateOrProvince: '',
 	postalCode: '',
@@ -20,7 +21,11 @@ export default function officeFormReducer(state = initialFormState, { type, payl
 			return {...state, ...formState};
 
 		case SET_INITIAL_FORM_STATE:
-			return initialFormState;
+			return {...initialFormState};
+
+		case SET_FORM_FIELD:
+			const field = payload.field;
+			return {...state, ...field}
 
 		default:
 			return state;

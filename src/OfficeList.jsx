@@ -1,13 +1,13 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { removeOffice, editOffice } from './actionCreators';
+import { removeOffice, setFormState } from './actionCreators';
 
 import OfficeItem from './OfficeItem';
 
 class OfficeList extends Component {
   render() {
-  	const { offices, removeOffice } = this.props;
+  	const { offices, removeOffice, editOffice } = this.props;
     return (
     	<div className="OfficeList">
     		{offices.map(office => 
@@ -30,7 +30,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => 
 	bindActionCreators({
 		removeOffice: removeOffice,
-		editOffice: editOffice
+		editOffice: setFormState
 	}, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(OfficeList);

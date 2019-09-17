@@ -1,30 +1,37 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { addOffice } from './actionCreators';
+import { addOffice, editOffice, setInitialFormState, setFormField } from './actionCreators';
 
 class OfficeForm extends Component {
 	state = {
-		country: '',
-		stateOrProvince: '',
-		postalCode: '',
-		city: '',
-		streetAddress: '',
-		address2: '',
-		phone: '',
-		fax: '',
-		email: '',
-		officeType: false 
-	}
+		isFormOpen: true
+	};
 
-	handleInputChange = ({ target: { name, value } }) => {
-		this.setState({ [name]: value });
+	handleInputChange = e => {
+		const target = e.target;
+		const value = target.type === 'checkbox' ? target.checked : target.value;
+    	const name = target.name;
+		
+		this.props.setFormField({[name]: value});
 	}
 
 	handleSubmitForm = e => {
 		e.preventDefault();
 
-		this.props.addOffice({...this.state});
+		const isEditMode = this.props.office.id !== null;
+
+		isEditMode ?
+			this.props.editOffice({...this.props.office}) : 
+			this.props.addOffice({...this.props.office})
+
+		this.handleCancelClick(e);
+	}
+
+	handleCancelClick = e => {
+		e.preventDefault();
+		// this.setState({ isFormOpen: false });
+		this.props.setInitialFormState();
 	}
 
 	render() {
@@ -39,11 +46,12 @@ class OfficeForm extends Component {
 			fax, 
 			email, 
 			officeType 
-		} = this.state;
+		} = this.props.office;
+		const isFormOpen = this.state.isFormOpen;
 
 		return (
 			<div className="OfficeForm">
-				<form onSubmit={this.handleSubmitForm}>
+				{isFormOpen && <form onSubmit={this.handleSubmitForm}>
 					<div>
 						<input className="OfficeForm__form_input" type="text" name="country" value={country} onChange={this.handleInputChange} />
 						<input className="OfficeForm__form_input" type="text" name="stateOrProvince" value={stateOrProvince} onChange={this.handleInputChange} />
@@ -56,21 +64,30 @@ class OfficeForm extends Component {
 						<input className="OfficeForm__form_input" type="text" name="phone" value={phone} onChange={this.handleInputChange} />
 						<input className="OfficeForm__form_input" type="text" name="fax" value={fax} onChange={this.handleInputChange} />
 						<input className="OfficeForm__form_input" type="text" name="email" value={email} onChange={this.handleInputChange} />
-						<input className="OfficeForm__form_input" type="checkbox" name="officeType" value={officeType} onChange={this.handleInputChange} />
+						<input className="OfficeForm__form_input" type="checkbox" name="officeType" checked={officeType} onChange={this.handleInputChange} />
 					</div>
 					<div>
-						<button>Cancel</button>
+						<button onClick={this.handleCancelClick}>Cancel</button>
 						<input type="submit" value="Save" />
 					</div>
-				</form>
+				</form>}
 			</div>
 		);
 	}
 }
 
+const mapStateToProps = state => {
+	return {
+		office: state.officeForm
+	}
+}
+
 const mapDispatchToProps = dispatch => 
 	bindActionCreators({
-		addOffice: addOffice
+		addOffice,
+		editOffice,
+		setInitialFormState,
+		setFormField
 	}, dispatch)
 
-export default connect(null, mapDispatchToProps)(OfficeForm);
+export default connect(mapStateToProps, mapDispatchToProps)(OfficeForm);
