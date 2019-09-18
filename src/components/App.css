@@ -55,6 +55,12 @@
   line-height: 2.29;
 }
 
+.App__pabel_img {
+  height: 12px;
+  width: 12px;
+  margin-left: 16px;
+}
+
 /* Body styles */
 .App__body {
   position: relative;
@@ -100,8 +106,12 @@
 /* Office styles */
 .App__office {
   height: 100%;
-  overflow-y: auto;
 }
+
+.App__office_list {
+  height: 100%;
+  overflow-y: auto;
+} 
 
 .App__office_row {
   display: flex;
@@ -124,6 +134,11 @@
 
 .App__footer_btn {
   margin-left: 32px;
+}
+
+.App__footer_center {
+  display: flex;
+  align-items: center;
 }
 
 .App__horizontal_line_dotten {

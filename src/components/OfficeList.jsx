@@ -7,7 +7,7 @@ class OfficeList extends Component {
   render() {
   	const { offices, removeOffice, editOffice } = this.props;
     return (
-    	<div className="OfficeList">
+    	<div className="OfficeList App__office_list">
     		{offices.map(office => 
     			<OfficeItem key={office.id} 
     						office={office} 

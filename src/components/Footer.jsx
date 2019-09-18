@@ -1,11 +1,13 @@
 import React from 'react';
 
+import cross from '../images/cross.jpg';
+
 export default function Footer(props) {
 	return (
 		<div className="App__footer">
-      <div className="App__footer_left">
+      <div className="App__footer_left OfficeItem__column_wrapper">
 				<button className="btn btn__light btn__big">Back</button>
-				<span className="App__footer_margin_left">Provide additional comments</span>
+				<div className="App__footer_margin_left App__footer_center"><img className="OfficeItem__img" alt="Cross" src={cross} />Provide additional comments</div>
       </div>
       <div className="App__footer_right">
       	<button className="btn btn__light btn__big">Skip this step</button>

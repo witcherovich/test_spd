@@ -1,6 +1,7 @@
 import React from 'react';
 
 import indicator from '../images/indicator.svg'
+import checkMarkGrey from '../images/checkMarkGrey.jpg';
 
 export default function Panel(props) {
 	return (
@@ -11,7 +12,7 @@ export default function Panel(props) {
             <div className="App__panel_body">
 				<div className="App__panel_row">
 					<div className="text__dark App__panel_title">COMPANY INFO</div>
-					<div className="App__panel_text">Basic Info</div>
+					<div className="App__panel_text">Basic Info <img className="App__pabel_img" alt="Check mark grey" src={checkMarkGrey} /></div>
 					<div className="text__bold App__panel_text">Offices</div>
 					<div className="text__light App__panel_text">Competitors</div>
 				</div>

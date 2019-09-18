@@ -1,5 +1,7 @@
 import React from 'react';
 
+import checkMark from '../images/checkMark.jpg';
+
 import './OfficeItem.css';
 
 export default function OfficeItem(props) {
@@ -36,7 +38,12 @@ export default function OfficeItem(props) {
 					<div className="OfficeItem__row">
 						<div className="text__dark OfficeItem__label">Adress:</div>
 						<div className="OfficeItem__column">
-							{officeType && <div className="text__bold">Primary HQ</div>}
+							{officeType && 
+								<div className="text__bold OfficeItem__office_type">
+									<img className="OfficeItem__img" alt="Check mark" src={checkMark} />
+									Primary HQ
+								</div>
+							}
 							<div>{address2}</div>
 							<div>{streetAddress}</div>
 							<div>{city}, {stateOrProvince} {postalCode}</div>
