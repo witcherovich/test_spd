@@ -1,7 +1,11 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { removeOfficeDB as removeOffice, setFormState } from './actionCreators';
+import { 
+  removeOfficeDB as removeOffice, 
+  setFormState, 
+  fetchOfficesDB as fetchOffices 
+} from './actionCreators';
 import { isString } from './helperFunctions';
 
 import OfficeForm from './OfficeForm';
@@ -13,6 +17,10 @@ import './App.css';
 class App extends Component {
   state = {
     isFormOpen: false
+  }
+
+  componentDidMount = () => {
+    this.props.fetchOffices();
   }
 
   toggleForm = () => {
@@ -110,7 +118,8 @@ const mapStateToProps = state => {
 const mapDispatchToProps = dispatch => 
   bindActionCreators({
     removeOffice: removeOffice,
-    editOffice: setFormState
+    editOffice: setFormState,
+    fetchOffices: fetchOffices
   }, dispatch)
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);

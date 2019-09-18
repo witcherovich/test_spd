@@ -1,7 +1,11 @@
-import { ADD_OFFICE, EDIT_OFFICE, REMOVE_OFFICE } from '../actionCreators';
+import { SET_OFFICES, ADD_OFFICE, EDIT_OFFICE, REMOVE_OFFICE } from '../actionCreators';
 
 export default function officesReducer(state = [], { type, payload }) {
 	switch(type) {
+		case SET_OFFICES:
+			const offices = payload.offices;
+			return [...state, ...offices];
+
 		case ADD_OFFICE:
 			const office = payload.office;
 			return [...state, office];

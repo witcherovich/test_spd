@@ -2,6 +2,7 @@ import firebase from '../firebaseConfig';
 const db = firebase.database().ref();
 
 // Office actions
+export const SET_OFFICES = 'SET_OFFICES';
 export const ADD_OFFICE = 'ADD_OFFICE';
 export const EDIT_OFFICE = 'EDIT_OFFICE';
 export const REMOVE_OFFICE = 'REMOVE_OFFICE';
@@ -12,6 +13,15 @@ export const SET_FORM_STATE = 'SET_FORM_STATE';
 export const SET_FORM_FIELD = 'SET_FORM_FIELD';
 
 // Office action creators
+export const fetchOfficesDB = () => dispatch => {
+	return db.child('/offices').once('value')
+		.then(data => {
+			const offices = Object.values(data.val()) || [];
+			dispatch(setOffices(offices));
+		})
+		.catch(error => console.log('error', error));
+}
+
 export const saveOfficeDB = office => dispatch => {
 	const isEditMode = !!office.id;
 
@@ -34,6 +44,15 @@ export const removeOfficeDB = officeId => dispatch => {
 	return db.child(`/offices/${officeId}`).remove()
 		.then(() => dispatch(removeOffice(officeId)))
 		.catch(error => console.log('error', error));
+}
+
+function setOffices(offices) {
+	return {
+		type: SET_OFFICES,
+		payload: {
+			offices
+		}
+	}
 }
 
 function addOffice(office) {
