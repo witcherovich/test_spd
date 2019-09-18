@@ -56,6 +56,10 @@
 	margin-left: 13px;
 }
 
+.OfficeForm__form_field_invalid {
+	border: solid 1px red;
+}
+
 .OfficeForm__form_checkbox_wrapper {
 	display: flex;
 	align-items: center;

@@ -18,6 +18,11 @@ class OfficeForm extends Component {
 	handleSubmitForm = e => {
 		e.preventDefault();
 
+		if (!this.isValid()) {
+			alert('Please, fill all required field(*)!');
+			return;
+		}
+
 		const isEditMode = this.props.office.id !== null;
 
 		isEditMode ?
@@ -31,6 +36,12 @@ class OfficeForm extends Component {
 		e.preventDefault();
 		this.props.closeForm();
 		this.props.setInitialFormState();
+	}
+
+	isValid = () => {
+		const { country, stateOrProvince, postalCode, city, streetAddress } = this.props.office;
+
+		return !!(country && stateOrProvince && postalCode && city && streetAddress);
 	}
 
 	render() {
@@ -54,7 +65,7 @@ class OfficeForm extends Component {
 						<div className="OfficeForm__form_column">
 							<div className="OfficeForm__form_row">
 								<div className="OfficeForm__form_label">*Country:</div>
-								<select className="OfficeForm__form_field" name="country" value={country} onChange={this.handleInputChange}>
+								<select className={`OfficeForm__form_field ${!country ? 'OfficeForm__form_field_invalid' : ''}`} name="country" value={country} onChange={this.handleInputChange}>
 									<option value="USA">USA</option>
 									<option value="Canada">Canada</option>
 									<option value="Ukraine">Ukraine</option>
@@ -62,15 +73,15 @@ class OfficeForm extends Component {
 							</div>
 							<div className="OfficeForm__form_row">
 								<div className="OfficeForm__form_label">*State/Province:</div>
-								<input className="OfficeForm__form_field" type="text" name="stateOrProvince" value={stateOrProvince} onChange={this.handleInputChange} />
+								<input className={`OfficeForm__form_field ${!stateOrProvince ? 'OfficeForm__form_field_invalid' : ''}`} type="text" name="stateOrProvince" value={stateOrProvince} onChange={this.handleInputChange} />
 							</div>
 							<div className="OfficeForm__form_row">
 								<div className="OfficeForm__form_label">*Postal Code:</div>
-								<input className="OfficeForm__form_field" type="text" name="postalCode" value={postalCode} onChange={this.handleInputChange} />
+								<input className={`OfficeForm__form_field ${!postalCode ? 'OfficeForm__form_field_invalid' : ''}`} type="text" name="postalCode" value={postalCode} onChange={this.handleInputChange} />
 							</div>
 							<div className="OfficeForm__form_row">
 								<div className="OfficeForm__form_label">*City:</div>
-								<select className="OfficeForm__form_field" name="city" value={city} onChange={this.handleInputChange}>
+								<select className={`OfficeForm__form_field ${!city ? 'OfficeForm__form_field_invalid' : ''}`} name="city" value={city} onChange={this.handleInputChange}>
 									<option value="New York">New York</option>
 									<option value="Toronto">Toronto</option>
 									<option value="Kiev">Kiev</option>
@@ -78,7 +89,7 @@ class OfficeForm extends Component {
 							</div>
 							<div className="OfficeForm__form_row">
 								<div className="OfficeForm__form_label">*Street Andress:</div>
-								<input className="OfficeForm__form_field" type="text" name="streetAddress" value={streetAddress} onChange={this.handleInputChange} />
+								<input className={`OfficeForm__form_field ${!streetAddress ? 'OfficeForm__form_field_invalid' : ''}`} type="text" name="streetAddress" value={streetAddress} onChange={this.handleInputChange} />
 							</div>
 							<div className="OfficeForm__form_row">
 								<div className="OfficeForm__form_label">Andress 2:</div>
