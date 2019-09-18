@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { 
@@ -100,5 +101,12 @@ const mapDispatchToProps = dispatch =>
     editOffice: setFormState,
     fetchOffices: fetchOffices
   }, dispatch)
+
+App.propTypes = {
+  offices: PropTypes.array.isRequired,
+  removeOffice: PropTypes.func.isRequired,
+  editOffice: PropTypes.func.isRequired,
+  fetchOffices: PropTypes.func.isRequired
+}
 
 export default connect(mapStateToProps, mapDispatchToProps)(App);
