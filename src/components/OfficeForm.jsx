@@ -120,8 +120,8 @@ class OfficeForm extends Component {
 							</div>
 							<div className="OfficeForm__form_column">
 								<div className="OfficeForm__form_row">
-									<button className="OfficeForm__btn" onClick={this.handleCancelClick}>Cancel</button>
-									<input className="OfficeForm__btn OfficeForm__margin_left OfficeForm__style_primary" type="submit" value="Save" />
+									<button className="btn btn__light" onClick={this.handleCancelClick}>Cancel</button>
+									<input className="btn btn__primary OfficeForm__margin_left" type="submit" value="Save" />
 								</div>
 							</div>
 						</div>

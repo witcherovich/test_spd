@@ -72,26 +72,6 @@
 	margin: 0 8px 0 0;
 }
 
-.OfficeForm__btn {
-	height: 24px;
-	border-radius: 4px;
-	border: solid 1px #53687e;
-	background-color: #ffffff;
-	padding: 0 16px;
-}
-
 .OfficeForm__margin_left {
 	margin-left: 10px;	
-}
-
-.OfficeForm__style_primary {
-	border: none;
-	border-radius: 2px;
-	background-color: #2888d1;
-	font-family: OpenSans;
-	font-size: 14px;
-	font-weight: bold;
-	line-height: 1;
-	letter-spacing: 0.4px;
-	color: #ffffff;
 }

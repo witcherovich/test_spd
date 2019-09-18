@@ -69,7 +69,7 @@ class App extends Component {
               <hr className="App__horizontal_line_dotten" />
               <div className="App__office">
                 <div className="App__office_row App__office_margin_bottom">
-                  <button className="App__btn_big OfficeForm__btn App__text_bold" onClick={this.toggleForm}>Add New Office</button>
+                  <button className="btn btn__light btn__big" onClick={this.toggleForm}>Add New Office</button>
                   <span className="App__text_normal">{officesLength} Offices</span>
                 </div>
                 {isFormOpen &&

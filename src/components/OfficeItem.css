@@ -43,9 +43,3 @@
 .OfficeItem__column_margin_left {
 	margin-left: 64px;
 }
-
-.OfficeItem__btn_normal {
-	border-radius: 2px;
-	border: solid 1px #d8dde3;
-	background-color: #f7f8fa;
-}
