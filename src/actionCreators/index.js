@@ -1,3 +1,5 @@
+import firebase from '../firebaseConfig';
+
 // Office actions and actionCreators
 export const ADD_OFFICE = 'ADD_OFFICE';
 export const EDIT_OFFICE = 'EDIT_OFFICE';
