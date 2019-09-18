@@ -23,13 +23,24 @@ class App extends Component {
   }
 
   handleEditOffice = office => {
+    if (!(office && office.hasOwnProperty('id') && Number.isInteger(office.id))) {
+      return;
+    }
+
     this.setState({ isFormOpen: true });
     this.props.editOffice(office);
   }
 
+  handleRemoveOffice = officeId => {
+    if (!(officeId && Number.isInteger(officeId))) {
+      return;
+    }
+    this.props.removeOffice(officeId);
+  }
+
   render() {
     const { isFormOpen } = this.state;
-    const { offices, removeOffice, editOffice } = this.props;
+    const { offices } = this.props;
     const officesLength = offices.length;
 
     return (
@@ -66,7 +77,9 @@ class App extends Component {
                 {isFormOpen &&
                   <OfficeForm closeForm={this.closeForm} />
                 }
-                <OfficeList offices={offices} removeOffice={removeOffice} editOffice={this.handleEditOffice} />
+                <OfficeList offices={offices} 
+                            removeOffice={this.handleRemoveOffice} 
+                            editOffice={this.handleEditOffice} />
               </div>
               <hr className="App__horizontal_line_dotten" />
               <div className="App__footer">
