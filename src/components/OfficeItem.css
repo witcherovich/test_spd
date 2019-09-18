@@ -11,16 +11,7 @@
 }
 
 .OfficeItem__text {
-	font-family: OpenSans;
-	font-size: 14px;
 	line-height: 1.29;
-	letter-spacing: 0.4px;
-	color: #334152;
-}
-
-.OfficeItem__text_bold {
-	font-weight: 600;
-	font-family: FontAwesome;
 }
 
 .OfficeItem__column_wrapper {
@@ -38,6 +29,9 @@
 
 .OfficeItem__office_inf {
 	width: 245px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .OfficeItem__column_margin_left {

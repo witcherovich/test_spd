@@ -32,19 +32,7 @@
 }
 
 .OfficeForm__form_label {
-	font-family: OpenSans;
-	font-size: 14px;
 	line-height: 1.14;
-	letter-spacing: 0.4px;
-	color: #53687e;
-}
-
-.OfficeForm__text_style {
-	font-family: OpenSans;
-	font-size: 14px;
-	line-height: 1;
-	letter-spacing: 0.4px;
-	color: #334152;
 }
 
 .OfficeForm__form_field {

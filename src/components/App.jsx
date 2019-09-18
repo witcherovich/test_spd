@@ -70,7 +70,7 @@ class App extends Component {
               <div className="App__office">
                 <div className="App__office_row App__office_margin_bottom">
                   <button className="btn btn__light btn__big" onClick={this.toggleForm}>Add New Office</button>
-                  <span className="App__text_normal">{officesLength} Offices</span>
+                  <span>{officesLength} Offices</span>
                 </div>
                 {isFormOpen &&
                   <OfficeForm closeForm={this.closeForm} />

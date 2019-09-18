@@ -21,20 +21,13 @@
   align-items: center;
 }
 
-.App__header_text_styles {
-  font-family: OpenSans;
-  font-size: 14px;
-  line-height: normal;
+.App__header_text {
   letter-spacing: 0.63px;
   color: #ffffff;
 }
 
 .App__header_margin_left {
   margin-left: 35px;
-}
-
-.App__header_text {
-  margin-left: 39px;
 }
 
 .App__panel_top {
@@ -46,7 +39,7 @@
   background: #175786;
 }
 
-.App__panel_block {
+.App__panel_row {
   min-height: 50px;
   border-bottom: 1px solid #d8dde3;
   padding-left: 23px;
@@ -54,21 +47,10 @@
 
 .App__panel_title {
   line-height: 3.43;
-  letter-spacing: 0.4px;
-  color: #53687e;
 }
 
-.App__panel_normal {
+.App__panel_text {
   line-height: 2.29;
-  color: #334152;
-}
-
-.App__panel_bold {
-  font-weight: 600;
-}
-
-.App__panel_light {
-  color: #8c96a3;
 }
 
 .App__body {
@@ -102,20 +84,13 @@
   box-sizing: border-box;
 }
 
-.App_title {
-  margin-bottom: 19px;
+.App__title_text {
+  line-height: 1.5;
+  letter-spacing: 2px; 
 }
 
-.App__title_big {
-  font-family: OpenSans;
-  font-size: 32px;
-  line-height: 1.47;
-  letter-spacing: 2px;
-  color: #53687e;
-}
-
-.App__title_big_grey {
-  color: #b7bdc4;
+.App__title_margin_bottom {
+  margin-bottom: 19px; 
 }
 
 .App__office {
@@ -145,39 +120,17 @@
   margin-left: 32px;
 }
 
-.App__btn_big {
-  height: 32px;
-}
-
-.App__text_normal {
-  font-family: OpenSans;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.4px;
-  color: #334152;
-}
-
-.App__text_bold {
-  font-family: OpenSans;
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 1;
-  letter-spacing: 0.4px;
-  color: #53687e;
-}
-
 .App__horizontal_line_dotten {
   border: 1px dotted #b7bdc5;
   margin: 35px 0;
 }
 
+/* Btn styles */
 .btn {
   height: 24px;
   border-radius: 2px;
   border: solid 1px #d8dde3;
   background-color: #f7f8fa;
-  font-family: OpenSans;
-  font-size: 14px;
   line-height: 1;
   letter-spacing: 0.5px;
   color: #53687e;
@@ -203,4 +156,25 @@
 
 .btn__big {
   height: 32px;
+}
+
+/* Text styles */
+.text__big {
+  font-size: 32px;
+}
+
+.text__bold {
+  font-weight: bold;
+}
+
+.text__dark {
+  color: #53687e;
+}
+
+.text__light {
+  color: #8c96a3;
+}
+
+.text__dull {
+  color: #b7bdc4
 }

@@ -30,13 +30,13 @@ export default function OfficeItem(props) {
 	}
 
 	return (
-		<div className="OfficeItem OfficeItem__text">
-			<div className="OfficeItem__column_wrapper">
+		<div className="OfficeItem">
+			<div className="OfficeItem__column_wrapper OfficeItem__text">
 				<div className="OfficeItem__column">
 					<div className="OfficeItem__row">
-						<div className="OfficeItem__label OfficeForm__form_label">Adress:</div>
+						<div className="text__dark OfficeItem__label">Adress:</div>
 						<div className="OfficeItem__column">
-							{officeType && <div className="OfficeItem__text_bold">Primary HQ</div>}
+							{officeType && <div className="text__bold">Primary HQ</div>}
 							<div>{address2}</div>
 							<div>{streetAddress}</div>
 							<div>{city}, {stateOrProvince} {postalCode}</div>
@@ -48,19 +48,19 @@ export default function OfficeItem(props) {
 				<div className="OfficeItem__column OfficeItem__column_margin_left">
 					{!!phone && 
 						<div className="OfficeItem__row">
-							<div className="OfficeItem__label OfficeForm__form_label">Phone:</div>
+							<div className="text__dark OfficeItem__label">Phone:</div>
 							<div className="OfficeItem__office_inf">{phone}</div>
 						</div>
 					}
 					{!!fax && 
 						<div className="OfficeItem__row">
-							<div className="OfficeItem__label OfficeForm__form_label">Fax:</div>
+							<div className="text__dark OfficeItem__label">Fax:</div>
 							<div className="OfficeItem__office_inf">{fax}</div>
 						</div>
 					}
 					{!!email && 
 						<div className="OfficeItem__row">
-							<div className="OfficeItem__label OfficeForm__form_label">Email:</div>
+							<div className="text__dark OfficeItem__label">Email:</div>
 							<div className="OfficeItem__office_inf">{email}</div>
 						</div>
 					}
