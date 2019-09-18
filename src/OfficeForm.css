@@ -73,6 +73,7 @@
 	border-radius: 4px;
 	border: solid 1px #53687e;
 	background-color: #ffffff;
+	padding: 0 16px;
 }
 
 .OfficeForm__margin_left {
@@ -86,8 +87,6 @@
 	font-family: OpenSans;
 	font-size: 14px;
 	font-weight: bold;
-	font-style: normal;
-	font-stretch: normal;
 	line-height: 1;
 	letter-spacing: 0.4px;
 	color: #ffffff;

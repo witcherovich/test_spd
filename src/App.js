@@ -60,7 +60,7 @@ class App extends Component {
               <hr className="App__horizontal_line_dotten" />
               <div className="App__office">
                 <div className="App__office_row App__office_margin_bottom">
-                  <button className="OfficeForm__btn App__text_bold" onClick={this.toggleForm}>Add New Office</button>
+                  <button className="App__btn_big OfficeForm__btn App__text_bold" onClick={this.toggleForm}>Add New Office</button>
                   <span className="App__text_normal">{officesLength} Offices</span>
                 </div>
                 {isFormOpen &&
@@ -69,7 +69,16 @@ class App extends Component {
                 <OfficeList offices={offices} removeOffice={removeOffice} editOffice={this.handleEditOffice} />
               </div>
               <hr className="App__horizontal_line_dotten" />
-              <div>Footer</div>
+              <div className="App__footer">
+                <div className="App__footer_left">
+                  <button className="App__btn_big OfficeForm__btn App__text_bold">Back</button>
+                  <span className="App__footer_margin_left App__text_normal">Provide additional comments</span>
+                </div>
+                <div className="App__footer_right">
+                  <button className="App__btn_big App__footer_btn OfficeForm__btn App__text_bold App__text_normal">Skip this step</button>
+                  <button className="App__btn_big App__footer_btn OfficeForm__btn OfficeForm__style_primary">Continue</button>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -15,9 +15,6 @@
 .App__header_text_styles {
   font-family: OpenSans;
   font-size: 14px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
   line-height: normal;
   letter-spacing: 0.63px;
   color: #ffffff;
@@ -65,9 +62,6 @@
 .App__title_big {
   font-family: OpenSans;
   font-size: 32px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
   line-height: 1.47;
   letter-spacing: 2px;
   color: #53687e;
@@ -80,9 +74,6 @@
 .App__text_normal {
   font-family: OpenSans;
   font-size: 14px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
   line-height: 1.71;
   letter-spacing: 0.4px;
   color: #334152;
@@ -92,8 +83,6 @@
   font-family: OpenSans;
   font-size: 14px;
   font-weight: bold;
-  font-style: normal;
-  font-stretch: normal;
   line-height: 1;
   letter-spacing: 0.4px;
   color: #53687e;
@@ -113,3 +102,19 @@
   margin-bottom: 18px;
 }
 
+.App__footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.App__footer_margin_left {
+  margin-left: 71px;
+}
+
+.App__footer_btn {
+  margin-left: 32px;
+}
+
+.App__btn_big {
+  height: 32px;
+}
