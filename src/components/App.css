@@ -118,28 +118,6 @@
   color: #b7bdc4;
 }
 
-.App__text_normal {
-  font-family: OpenSans;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.4px;
-  color: #334152;
-}
-
-.App__text_bold {
-  font-family: OpenSans;
-  font-size: 14px;
-  font-weight: bold;
-  line-height: 1;
-  letter-spacing: 0.4px;
-  color: #53687e;
-}
-
-.App__horizontal_line_dotten {
-  border: 1px dotted #b7bdc5;
-  margin: 35px 0;
-}
-
 .App__office {
   height: 100%;
   overflow-y: auto;
@@ -169,4 +147,26 @@
 
 .App__btn_big {
   height: 32px;
+}
+
+.App__text_normal {
+  font-family: OpenSans;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.4px;
+  color: #334152;
+}
+
+.App__text_bold {
+  font-family: OpenSans;
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 1;
+  letter-spacing: 0.4px;
+  color: #53687e;
+}
+
+.App__horizontal_line_dotten {
+  border: 1px dotted #b7bdc5;
+  margin: 35px 0;
 }
