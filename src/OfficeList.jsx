@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 import OfficeItem from './OfficeItem';
 
@@ -16,6 +17,12 @@ class OfficeList extends Component {
     	</div>
     );
   }
+}
+
+OfficeList.propTypes = {
+  offices: PropTypes.array.isRequired,
+  removeOffice: PropTypes.func.isRequired,
+  editOffice: PropTypes.func.isRequired
 }
 
 export default OfficeList;
