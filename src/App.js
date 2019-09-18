@@ -33,7 +33,7 @@ class App extends Component {
   }
 
   handleRemoveOffice = officeId => {
-    if (!(officeId && isNumber(officeId))) {
+    if (!isNumber(officeId)) {
       return;
     }
     this.props.removeOffice(officeId);
@@ -48,7 +48,7 @@ class App extends Component {
       <div className="App">
         <div className="App__header App__header_text_styles">
           <div className="App__header_left">
-            <img src={logoSpd} />
+            <img alt="Logo Spd" src={logoSpd} />
             <span className="App__header_margin_left">Profile Editor</span>
           </div>
           <div className="App__header_rigt">

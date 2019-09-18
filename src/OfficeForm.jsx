@@ -115,7 +115,7 @@ class OfficeForm extends Component {
 									<div className="OfficeForm__form_label">Office Type:</div>
 									<div className="OfficeForm__form_checkbox_wrapper">
 										<input className="OfficeForm__form_checkbox" type="checkbox" name="officeType" checked={officeType} onChange={this.handleInputChange} />
-										<div>Primary HQ</div>
+										<div className="App__text_normal">Primary HQ</div>
 									</div>
 								</div>
 							</div>
