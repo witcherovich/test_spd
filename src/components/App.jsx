@@ -12,6 +12,7 @@ import OfficeForm from './OfficeForm';
 import OfficeList from './OfficeList';
 
 import logoSpd from '../images/logo_spd.svg';
+import indicator from '../images/indicator.svg'
 import './App.css';
 
 class App extends Component {
@@ -68,7 +69,26 @@ class App extends Component {
         <div className="App__body">
           <div className="App__body_content">
             <div className="App__body_content_right">
-              Panel
+              <div className="App__panel_top">
+                <img alt="Indicator" src={indicator} />
+              </div>
+              <div className="App__panel_body App__text_normal">
+                <div className="App__panel_block">
+                  <div className="App__panel_title">COMPANY INFO</div>
+                  <div className="App__panel_normal">Basic Info</div>
+                  <div className="App__panel_normal App__panel_bold">Offices</div>
+                  <div className="App__panel_normal App__panel_light">Competitors</div>
+                </div>
+                <div className="App__panel_block">
+                  <div className="App__panel_title">MY FIRM</div>
+                </div>
+                <div className="App__panel_block">
+                  <div className="App__panel_title">DEALS</div>
+                </div>
+                <div className="App__panel_block">
+                  <div className="App__panel_title" >FINANCIALS</div>
+                </div>
+              </div>
             </div>
             <div className="App__body_content_left">
               <div className="App__title">

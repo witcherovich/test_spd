@@ -37,6 +37,40 @@
   margin-left: 39px;
 }
 
+.App__panel_top {
+  position: relative;
+  height: 147.4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #175786;
+}
+
+.App__panel_block {
+  min-height: 50px;
+  border-bottom: 1px solid #d8dde3;
+  padding-left: 23px;
+}
+
+.App__panel_title {
+  line-height: 3.43;
+  letter-spacing: 0.4px;
+  color: #53687e;
+}
+
+.App__panel_normal {
+  line-height: 2.29;
+  color: #334152;
+}
+
+.App__panel_bold {
+  font-weight: 600;
+}
+
+.App__panel_light {
+  color: #8c96a3;
+}
+
 .App__body {
   position: relative;
   height: 100%;
