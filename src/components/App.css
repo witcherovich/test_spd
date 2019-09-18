@@ -86,14 +86,14 @@
   box-sizing: border-box;
 }
 
-.App__body_content_right {
+.App__body_left {
   width: 219px;
   border: solid 1px #ffffff;
   background-color: #e9f0f5;
   box-sizing: border-box;
 }
 
-.App__body_content_left {
+.App__body_right {
   width: 100%;
   display: flex;
   flex-direction: column;
