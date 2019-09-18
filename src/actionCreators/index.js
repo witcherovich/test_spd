@@ -19,7 +19,7 @@ export const fetchOfficesDB = () => dispatch => {
 			const offices = Object.values(data.val()) || [];
 			dispatch(setOffices(offices));
 		})
-		.catch(error => console.log('error', error));
+		.catch(() => alert('Service Unavailable error message'));
 }
 
 export const saveOfficeDB = office => dispatch => {
@@ -37,13 +37,13 @@ export const saveOfficeDB = office => dispatch => {
 				dispatch(editOffice(newOffice)) :
 				dispatch(addOffice(newOffice))
 		})
-		.catch(error => console.log('error', error));
+		.catch(() => alert('Service Unavailable error message'));
 }
 
 export const removeOfficeDB = officeId => dispatch => {
 	return db.child(`/offices/${officeId}`).remove()
 		.then(() => dispatch(removeOffice(officeId)))
-		.catch(error => console.log('error', error));
+		.catch(() => alert('Service Unavailable error message'));
 }
 
 function setOffices(offices) {
