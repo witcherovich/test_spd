@@ -7,6 +7,7 @@
   overflow-y: scroll;
 }
 
+/* Header styles */
 .App__header {
   height: 64px;
   display: flex;
@@ -30,6 +31,7 @@
   margin-left: 35px;
 }
 
+/* Panel styles */
 .App__panel_top {
   position: relative;
   height: 147.4px;
@@ -53,6 +55,7 @@
   line-height: 2.29;
 }
 
+/* Body styles */
 .App__body {
   position: relative;
   height: 100%;
@@ -84,6 +87,7 @@
   box-sizing: border-box;
 }
 
+/* Title styles */
 .App__title_text {
   line-height: 1.5;
   letter-spacing: 2px; 
@@ -93,6 +97,7 @@
   margin-bottom: 19px; 
 }
 
+/* Office styles */
 .App__office {
   height: 100%;
   overflow-y: auto;
@@ -107,6 +112,7 @@
   margin-bottom: 18px;
 }
 
+/* Footer styles */
 .App__footer {
   display: flex;
   justify-content: space-between;
