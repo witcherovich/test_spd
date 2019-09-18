@@ -5,13 +5,13 @@ import {
   removeOfficeDB as removeOffice, 
   setFormState, 
   fetchOfficesDB as fetchOffices 
-} from './actionCreators';
-import { isString } from './helperFunctions';
+} from '../actionCreators';
+import { isString } from '../helperFunctions';
 
 import OfficeForm from './OfficeForm';
 import OfficeList from './OfficeList';
 
-import logoSpd from './images/logo_spd.svg';
+import logoSpd from '../images/logo_spd.svg';
 import './App.css';
 
 class App extends Component {
