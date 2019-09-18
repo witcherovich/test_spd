@@ -12,27 +12,21 @@ export const SET_FORM_STATE = 'SET_FORM_STATE';
 export const SET_FORM_FIELD = 'SET_FORM_FIELD';
 
 // Office action creators
-export const addOfficeDB = office => dispatch => {
-	const officeId = db.child('offices').push().key;
+export const saveOfficeDB = office => dispatch => {
+	const isEditMode = !!office.id;
+
+	const officeId = office.id || db.child('offices').push().key;
 	const newOffice = {...office, id: officeId};
 	const updates = {};
 
 	updates[`/offices/${officeId}`] = newOffice;
 
 	return db.update(updates)
-		.then(() => dispatch(addOffice(newOffice)))
-		.catch(error => console.log('error', error));
-}
-
-export const editOfficeDB = office => dispatch => {
-	const officeId = office.id;
-	const newOffice = {...office};
-	const updates = {};
-
-	updates[`/offices/${officeId}`] = newOffice;
-
-	return db.update(updates)
-		.then(() => dispatch(editOffice(newOffice)))
+		.then(() => {
+			isEditMode ?
+				dispatch(editOffice(newOffice)) :
+				dispatch(addOffice(newOffice))
+		})
 		.catch(error => console.log('error', error));
 }
 

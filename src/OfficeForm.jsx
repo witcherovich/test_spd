@@ -3,8 +3,7 @@ import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { 
-	addOfficeDB as addOffice, 
-	editOfficeDB as editOffice, 
+	saveOfficeDB as saveOffice, 
 	setInitialFormState, 
 	setFormField
 } from './actionCreators';
@@ -28,12 +27,7 @@ class OfficeForm extends Component {
 			return;
 		}
 
-		const isEditMode = this.props.office.id !== null;
-
-		isEditMode ?
-			this.props.editOffice({...this.props.office}) : 
-			this.props.addOffice({...this.props.office})
-
+		this.props.saveOffice({...this.props.office});
 		this.handleCancelClick(e);
 	}
 
@@ -146,8 +140,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => 
 	bindActionCreators({
-		addOffice,
-		editOffice,
+		saveOffice,
 		setInitialFormState,
 		setFormField
 	}, dispatch);
@@ -165,8 +158,7 @@ OfficeForm.propTypes = {
 		email: PropTypes.string.isRequired,
 		officeType: PropTypes.bool
 	}).isRequired,
-	addOffice: PropTypes.func.isRequired,
-	editOffice: PropTypes.func.isRequired,
+	saveOffice: PropTypes.func.isRequired,
 	setInitialFormState: PropTypes.func.isRequired,
 	setFormField: PropTypes.func.isRequired
 }
