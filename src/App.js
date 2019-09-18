@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { removeOffice, setFormState } from './actionCreators';
-import { isNumber } from './helperFunctions';
+import { removeOfficeDB as removeOffice, setFormState } from './actionCreators';
+import { isString } from './helperFunctions';
 
 import OfficeForm from './OfficeForm';
 import OfficeList from './OfficeList';
@@ -24,7 +24,7 @@ class App extends Component {
   }
 
   handleEditOffice = office => {
-    if (!(office && office.hasOwnProperty('id') && isNumber(office.id))) {
+    if (!(office && office.hasOwnProperty('id') && isString(office.id))) {
       return;
     }
 
@@ -33,7 +33,7 @@ class App extends Component {
   }
 
   handleRemoveOffice = officeId => {
-    if (!isNumber(officeId)) {
+    if (!(officeId && isString(officeId))) {
       return;
     }
     this.props.removeOffice(officeId);

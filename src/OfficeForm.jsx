@@ -2,7 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
-import { addOffice, editOffice, setInitialFormState, setFormField } from './actionCreators';
+import { 
+	addOfficeDB as addOffice, 
+	editOfficeDB as editOffice, 
+	setInitialFormState, 
+	setFormField
+} from './actionCreators';
 
 import './OfficeForm.css';
 

@@ -1,11 +1,48 @@
 import firebase from '../firebaseConfig';
+const db = firebase.database().ref();
 
-// Office actions and actionCreators
+// Office actions
 export const ADD_OFFICE = 'ADD_OFFICE';
 export const EDIT_OFFICE = 'EDIT_OFFICE';
 export const REMOVE_OFFICE = 'REMOVE_OFFICE';
 
-export function addOffice(office) {
+// Office form actions
+export const SET_INITIAL_FORM_STATE = 'SET_INITIAL_FORM_STATE';
+export const SET_FORM_STATE = 'SET_FORM_STATE';
+export const SET_FORM_FIELD = 'SET_FORM_FIELD';
+
+// Office action creators
+export const addOfficeDB = office => dispatch => {
+	const officeId = db.child('offices').push().key;
+	const newOffice = {...office, id: officeId};
+	const updates = {};
+
+	updates[`/offices/${officeId}`] = newOffice;
+
+	return db.update(updates)
+		.then(() => dispatch(addOffice(newOffice)))
+		.catch(error => console.log('error', error));
+}
+
+export const editOfficeDB = office => dispatch => {
+	const officeId = office.id;
+	const newOffice = {...office};
+	const updates = {};
+
+	updates[`/offices/${officeId}`] = newOffice;
+
+	return db.update(updates)
+		.then(() => dispatch(editOffice(newOffice)))
+		.catch(error => console.log('error', error));
+}
+
+export const removeOfficeDB = officeId => dispatch => {
+	return db.child(`/offices/${officeId}`).remove()
+		.then(() => dispatch(removeOffice(officeId)))
+		.catch(error => console.log('error', error));
+}
+
+function addOffice(office) {
 	return {
 		type: ADD_OFFICE,
 		payload: {
@@ -14,7 +51,7 @@ export function addOffice(office) {
 	}
 }
 
-export function editOffice(office) {
+function editOffice(office) {
 	return {
 		type: EDIT_OFFICE,
 		payload: {
@@ -23,7 +60,7 @@ export function editOffice(office) {
 	}
 }
 
-export function removeOffice(officeId) {
+function removeOffice(officeId) {
 	return {
 		type: REMOVE_OFFICE,
 		payload: {
@@ -32,12 +69,7 @@ export function removeOffice(officeId) {
 	}
 }
 
-
-// Office form const and actionCreators
-export const SET_INITIAL_FORM_STATE = 'SET_INITIAL_FORM_STATE';
-export const SET_FORM_STATE = 'SET_FORM_STATE';
-export const SET_FORM_FIELD = 'SET_FORM_FIELD';
-
+// Office form action creators
 export function setInitialFormState() {
 	return {
 		type: SET_INITIAL_FORM_STATE
@@ -61,4 +93,3 @@ export function setFormField(field) {
 		}
 	}
 }
-
