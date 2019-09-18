@@ -18,7 +18,7 @@ class OfficeForm extends Component {
 	handleSubmitForm = e => {
 		e.preventDefault();
 
-		if (!this.isValid()) {
+		if (!this.isFormValid()) {
 			alert('Please, fill all required field(*)!');
 			return;
 		}
@@ -38,7 +38,7 @@ class OfficeForm extends Component {
 		this.props.setInitialFormState();
 	}
 
-	isValid = () => {
+	isFormValid = () => {
 		const { country, stateOrProvince, postalCode, city, streetAddress } = this.props.office;
 
 		return !!(country && stateOrProvince && postalCode && city && streetAddress);
@@ -159,7 +159,11 @@ OfficeForm.propTypes = {
 		fax: PropTypes.string.isRequired,
 		email: PropTypes.string.isRequired,
 		officeType: PropTypes.bool
-	}).isRequired
+	}).isRequired,
+	addOffice: PropTypes.func.isRequired,
+	editOffice: PropTypes.func.isRequired,
+	setInitialFormState: PropTypes.func.isRequired,
+	setFormField: PropTypes.func.isRequired
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(OfficeForm);
