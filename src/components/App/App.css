@@ -4,7 +4,7 @@
   bottom: 0;
   right: 0;
   left: 0;
-  overflow-y: scroll;
+  height: calc(100% - 64px);
 }
 
 /* Body styles */
