@@ -60,28 +60,26 @@ class App extends Component {
       <div className="App">
         <Header />
         <div className="App__body">
-          <div className="App__body_content">
-            <div className="App__body_left">
-              <Panel />
-            </div>
-            <div className="App__body_right">
-              <Title />
-              <hr className="App__horizontal_line_dotten" />
-              <div className="App__office">
-                <div className="App__office_row App__office_margin_bottom">
-                  <button className="btn btn__light btn__big" onClick={this.toggleForm}>Add New Office</button>
-                  <span>{officesLength} Offices</span>
-                </div>
-                {isFormOpen &&
-                  <OfficeForm closeForm={this.closeForm} />
-                }
-                <OfficeList offices={offices} 
-                            removeOffice={this.handleRemoveOffice} 
-                            editOffice={this.handleEditOffice} />
+          <div className="App__body_left">
+            <Panel />
+          </div>
+          <div className="App__body_right">
+            <Title />
+            <hr className="App__horizontal_line_dotten" />
+            <div className="App__office">
+              <div className="App__office_row App__office_margin_bottom">
+                <button className="btn btn__light btn__big" onClick={this.toggleForm}>Add New Office</button>
+                <span>{officesLength} Offices</span>
               </div>
-              <hr className="App__horizontal_line_dotten" />
-              <Footer />
+              {isFormOpen &&
+                <OfficeForm closeForm={this.closeForm} />
+              }
+              <OfficeList offices={offices} 
+                          removeOffice={this.handleRemoveOffice} 
+                          editOffice={this.handleEditOffice} />
             </div>
+            <hr className="App__horizontal_line_dotten" />
+            <Footer />
           </div>
         </div>
       </div>
