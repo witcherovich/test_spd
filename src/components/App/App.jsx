@@ -37,6 +37,7 @@ class App extends Component {
 
   handleEditOffice = office => {
     if (!(office && office.hasOwnProperty('id') && isString(office.id))) {
+      alert('Something went wrong.');
       return;
     }
 
@@ -46,6 +47,7 @@ class App extends Component {
 
   handleRemoveOffice = officeId => {
     if (!(officeId && isString(officeId))) {
+      alert('Something went wrong.');
       return;
     }
     this.props.removeOffice(officeId);
