@@ -1,8 +1,8 @@
-.App__title_text {
+.Title__title_text {
   line-height: 1.5;
   letter-spacing: 2px; 
 }
 
-.App__title_margin_bottom {
+.Title__title_margin_bottom {
   margin-bottom: 19px; 
 }

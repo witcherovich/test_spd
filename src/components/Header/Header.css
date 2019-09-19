@@ -1,4 +1,4 @@
-.App__header {
+.Header {
   height: 64px;
   display: flex;
   justify-content: space-between;
@@ -7,16 +7,16 @@
   padding: 0 25px;
 }
 
-.App__header_left {
+.Header__left {
   display: flex;
   align-items: center;
 }
 
-.App__header_text {
+.Header__text {
   letter-spacing: 0.63px;
   color: #ffffff;
 }
 
-.App__header_margin_left {
+.Header__margin_left {
   margin-left: 35px;
 }

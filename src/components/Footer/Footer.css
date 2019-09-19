@@ -1,22 +1,17 @@
-.App__footer {
+.Footer {
   display: flex;
   justify-content: space-between;
 }
 
-.App__footer_margin_left {
+.Footer__margin_left {
   margin-left: 71px;
 }
 
-.App__footer_btn {
+.Footer__btn {
   margin-left: 32px;
 }
 
-.App__footer_center {
+.Footer__center {
   display: flex;
   align-items: center;
-}
-
-.App__horizontal_line_dotten {
-  border: 1px dotted #b7bdc5;
-  margin: 35px 0;
 }

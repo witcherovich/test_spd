@@ -1,4 +1,4 @@
-.App__panel_top {
+.Panel__top {
   position: relative;
   height: 147.4px;
   display: flex;
@@ -7,21 +7,21 @@
   background: #175786;
 }
 
-.App__panel_row {
+.Panel__row {
   min-height: 50px;
   border-bottom: 1px solid #d8dde3;
   padding-left: 23px;
 }
 
-.App__panel_title {
+.Panel__title {
   line-height: 3.43;
 }
 
-.App__panel_text {
+.Panel__text {
   line-height: 2.29;
 }
 
-.App__pabel_img {
+.Panel__img {
   height: 12px;
   width: 12px;
   margin-left: 16px;

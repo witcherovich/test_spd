@@ -54,6 +54,11 @@
   margin-bottom: 18px;
 }
 
+.App__horizontal_line_dotten {
+  border: 1px dotted #b7bdc5;
+  margin: 35px 0;
+}
+
 /* Btn styles */
 .btn {
   height: 24px;
