@@ -45,16 +45,16 @@ export default function OfficeItem(props) {
 								</div>
 							}
 							{!!address2 && 
-								<span>{address2}</span>
+								<span className="OfficeItem__office_inf">{address2}</span>
 							}
-							<span>{streetAddress}</span>
-							<span>{city}, {stateOrProvince} {postalCode}</span>
-							<span>{country}</span>
+							<span className="OfficeItem__office_inf">{streetAddress}</span>
+							<span className="OfficeItem__office_inf">{city}, {stateOrProvince} {postalCode}</span>
+							<span className="OfficeItem__office_inf">{country}</span>
 						</div>
 					</div>
 				</div>
 
-				<div className="OfficeItem__column OfficeItem__column_margin_left">
+				<div className="OfficeItem__column">
 					{!!phone && 
 						<div className="OfficeItem__row">
 							<div className="text__dark OfficeItem__label">Phone:</div>
