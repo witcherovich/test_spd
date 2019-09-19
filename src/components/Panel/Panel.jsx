@@ -1,7 +1,7 @@
 import React from 'react';
 
-import indicator from '../images/indicator.svg'
-import checkMarkGrey from '../images/checkMarkGrey.jpg';
+import indicator from '../../images/indicator.svg'
+import checkMarkGrey from '../../images/checkMarkGrey.jpg';
 
 export default function Panel(props) {
 	return (

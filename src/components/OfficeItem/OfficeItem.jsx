@@ -1,6 +1,6 @@
 import React from 'react';
 
-import checkMark from '../images/checkMark.jpg';
+import checkMark from '../../images/checkMark.jpg';
 
 import './OfficeItem.css';
 

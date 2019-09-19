@@ -1,6 +1,6 @@
 import React from 'react';
 
-import logoSpd from '../images/logo_spd.svg';
+import logoSpd from '../../images/logo_spd.svg';
 
 export default function Header(props) {
 	return (

@@ -6,7 +6,7 @@ import {
 	saveOfficeDB as saveOffice, 
 	setInitialFormState, 
 	setFormField
-} from '../actionCreators';
+} from '../../actionCreators';
 
 import './OfficeForm.css';
 

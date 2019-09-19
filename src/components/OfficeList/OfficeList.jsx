@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 
-import OfficeItem from './OfficeItem';
+import OfficeItem from '../OfficeItem/OfficeItem';
 
 class OfficeList extends Component {
   render() {

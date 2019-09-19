@@ -1,6 +1,6 @@
 import React from 'react';
 
-import cross from '../images/cross.jpg';
+import cross from '../../images/cross.jpg';
 
 export default function Footer(props) {
 	return (

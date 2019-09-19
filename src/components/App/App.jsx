@@ -6,15 +6,15 @@ import {
   removeOfficeDB as removeOffice, 
   setFormState, 
   fetchOfficesDB as fetchOffices 
-} from '../actionCreators';
-import { isString } from '../helperFunctions';
+} from '../../actionCreators';
+import { isString } from '../../helperFunctions';
 
-import Header from './Header';
-import Panel from './Panel';
-import Title from './Title';
-import Footer from './Footer';
-import OfficeForm from './OfficeForm';
-import OfficeList from './OfficeList';
+import Header from '../Header/Header';
+import Panel from '../Panel/Panel';
+import Title from '../Title/Title';
+import Footer from '../Footer/Footer';
+import OfficeForm from '../OfficeForm/OfficeForm';
+import OfficeList from '../OfficeList/OfficeList';
 
 import './App.css';
 
