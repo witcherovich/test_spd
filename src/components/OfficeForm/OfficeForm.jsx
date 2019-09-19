@@ -28,11 +28,11 @@ class OfficeForm extends Component {
 		}
 
 		this.props.saveOffice({...this.props.office});
-		this.handleCancelClick(e);
+		this.handleCancelClick();
 	}
 
 	handleCancelClick = e => {
-		e.preventDefault();
+		if (e) e.preventDefault();
 		this.props.closeForm();
 		this.props.setInitialFormState();
 	}
