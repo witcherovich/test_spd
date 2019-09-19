@@ -1,8 +1,5 @@
-.OfficeForm__content {
+.OfficeForm__form {
 	width: 100%;
-}
-
-.OfficeForm__content_form {
 	display: flex;
 	justify-content: space-between;
 	height: 281px;
@@ -15,8 +12,10 @@
 
 .OfficeForm__form_column_wrapper {
 	display: flex;
-	justify-content: space-between;
-	width: 40%;
+}
+
+.OfficeForm__column_margin_left {
+	margin-left: 46px;
 }
 
 .OfficeForm__form_column {
@@ -49,9 +48,9 @@
 }
 
 .OfficeForm__form_checkbox_wrapper {
+	width: 191px;
 	display: flex;
 	align-items: center;
-	width: 191px;
 	border-radius: 2px;
 	margin-left: 10px;
 }

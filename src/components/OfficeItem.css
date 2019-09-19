@@ -1,12 +1,12 @@
 .OfficeItem {
 	height: 120px;
+	display: flex;
+	justify-content: space-between;
 	border-radius: 2px;
 	border: solid 1px #d7dce2;
 	background-color: #ffffff;
 	padding: 13px 33px;
 	box-sizing: border-box;
-	display: flex;
-	justify-content: space-between;
 	margin-top: 16px;
 }
 
@@ -16,6 +16,11 @@
 
 .OfficeItem__column_wrapper {
 	display: flex;
+}
+
+.OfficeItem__column {
+	display: flex;
+	flex-direction: column;
 }
 
 .OfficeItem__row {

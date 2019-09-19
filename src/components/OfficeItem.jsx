@@ -44,10 +44,12 @@ export default function OfficeItem(props) {
 									Primary HQ
 								</div>
 							}
-							<div>{address2}</div>
-							<div>{streetAddress}</div>
-							<div>{city}, {stateOrProvince} {postalCode}</div>
-							<div>{country}</div>
+							{!!address2 && 
+								<span>{address2}</span>
+							}
+							<span>{streetAddress}</span>
+							<span>{city}, {stateOrProvince} {postalCode}</span>
+							<span>{country}</span>
 						</div>
 					</div>
 				</div>
@@ -56,26 +58,28 @@ export default function OfficeItem(props) {
 					{!!phone && 
 						<div className="OfficeItem__row">
 							<div className="text__dark OfficeItem__label">Phone:</div>
-							<div className="OfficeItem__office_inf">{phone}</div>
+							<span className="OfficeItem__office_inf">{phone}</span>
 						</div>
 					}
 					{!!fax && 
 						<div className="OfficeItem__row">
 							<div className="text__dark OfficeItem__label">Fax:</div>
-							<div className="OfficeItem__office_inf">{fax}</div>
+							<span className="OfficeItem__office_inf">{fax}</span>
 						</div>
 					}
 					{!!email && 
 						<div className="OfficeItem__row">
 							<div className="text__dark OfficeItem__label">Email:</div>
-							<div className="OfficeItem__office_inf">{email}</div>
+							<span className="OfficeItem__office_inf">{email}</span>
 						</div>
 					}
 				</div>
 			</div>
 			<div className="OfficeItem__column">
-				<button className="btn" onClick={handleRemoveOffice}>Remove</button>
-				<button className="btn btn__primary OfficeForm__margin_left" onClick={handleEditOffice}>Edit</button>
+				<div className="OfficeItem__row">
+					<button className="btn" onClick={handleRemoveOffice}>Remove</button>
+					<button className="btn btn__primary OfficeForm__margin_left" onClick={handleEditOffice}>Edit</button>
+				</div>
 			</div>
 		</div>
 	);
