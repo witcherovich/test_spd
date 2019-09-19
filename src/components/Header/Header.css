@@ -1,0 +1,22 @@
+.App__header {
+  height: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #175786;
+  padding: 0 25px;
+}
+
+.App__header_left {
+  display: flex;
+  align-items: center;
+}
+
+.App__header_text {
+  letter-spacing: 0.63px;
+  color: #ffffff;
+}
+
+.App__header_margin_left {
+  margin-left: 35px;
+}

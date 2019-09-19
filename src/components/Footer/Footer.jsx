@@ -2,6 +2,8 @@ import React from 'react';
 
 import cross from '../../images/cross.jpg';
 
+import './Footer.css';
+
 export default function Footer(props) {
 	return (
 		<div className="App__footer">

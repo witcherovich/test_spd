@@ -3,6 +3,8 @@ import React from 'react';
 import indicator from '../../images/indicator.svg'
 import checkMarkGrey from '../../images/checkMarkGrey.jpg';
 
+import './Panel.css';
+
 export default function Panel(props) {
 	return (
 		<div className="App__panel">

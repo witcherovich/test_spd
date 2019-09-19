@@ -2,6 +2,8 @@ import React from 'react';
 
 import logoSpd from '../../images/logo_spd.svg';
 
+import './Header.css';
+
 export default function Header(props) {
 	return (
     <div className="App__header App__header_text">

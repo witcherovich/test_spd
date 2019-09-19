@@ -1,0 +1,22 @@
+.App__footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.App__footer_margin_left {
+  margin-left: 71px;
+}
+
+.App__footer_btn {
+  margin-left: 32px;
+}
+
+.App__footer_center {
+  display: flex;
+  align-items: center;
+}
+
+.App__horizontal_line_dotten {
+  border: 1px dotted #b7bdc5;
+  margin: 35px 0;
+}

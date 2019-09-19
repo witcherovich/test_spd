@@ -7,60 +7,6 @@
   overflow-y: scroll;
 }
 
-/* Header styles */
-.App__header {
-  height: 64px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background-color: #175786;
-  padding: 0 25px;
-}
-
-.App__header_left {
-  display: flex;
-  align-items: center;
-}
-
-.App__header_text {
-  letter-spacing: 0.63px;
-  color: #ffffff;
-}
-
-.App__header_margin_left {
-  margin-left: 35px;
-}
-
-/* Panel styles */
-.App__panel_top {
-  position: relative;
-  height: 147.4px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #175786;
-}
-
-.App__panel_row {
-  min-height: 50px;
-  border-bottom: 1px solid #d8dde3;
-  padding-left: 23px;
-}
-
-.App__panel_title {
-  line-height: 3.43;
-}
-
-.App__panel_text {
-  line-height: 2.29;
-}
-
-.App__pabel_img {
-  height: 12px;
-  width: 12px;
-  margin-left: 16px;
-}
-
 /* Body styles */
 .App__body {
   position: relative;
@@ -93,16 +39,6 @@
   box-sizing: border-box;
 }
 
-/* Title styles */
-.App__title_text {
-  line-height: 1.5;
-  letter-spacing: 2px; 
-}
-
-.App__title_margin_bottom {
-  margin-bottom: 19px; 
-}
-
 /* Office styles */
 .App__office {
   height: 100%;
@@ -116,30 +52,6 @@
 
 .App__office_margin_bottom {
   margin-bottom: 18px;
-}
-
-/* Footer styles */
-.App__footer {
-  display: flex;
-  justify-content: space-between;
-}
-
-.App__footer_margin_left {
-  margin-left: 71px;
-}
-
-.App__footer_btn {
-  margin-left: 32px;
-}
-
-.App__footer_center {
-  display: flex;
-  align-items: center;
-}
-
-.App__horizontal_line_dotten {
-  border: 1px dotted #b7bdc5;
-  margin: 35px 0;
 }
 
 /* Btn styles */
