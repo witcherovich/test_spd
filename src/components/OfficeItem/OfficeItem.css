@@ -14,7 +14,7 @@
 	line-height: 1.29;
 }
 
-.OfficeItem__column_wrapper {
+.OfficeItem__column_wrapper, .OfficeItem__office_type {
 	display: flex;
 }
 
@@ -30,10 +30,6 @@
 
 .OfficeItem__label {
 	margin-right: 15px;
-}
-
-.OfficeItem__office_type {
-	display: flex;
 }
 
 .OfficeItem__img {

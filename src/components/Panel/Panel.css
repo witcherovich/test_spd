@@ -21,6 +21,12 @@
   line-height: 2.29;
 }
 
+.Panel__selected {
+  border-left: 2px solid #2888d1;
+  margin-left: -23px;
+  padding-left: 20px;
+}
+
 .Panel__img {
   height: 12px;
   width: 12px;
