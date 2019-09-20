@@ -72,7 +72,7 @@ class Offices extends Component<OfficeProps, OfficeState> {
 
 		return (
 			<div className="Offices">
-				<div className="Offices_row Offices_margin_bottom">
+				<div className="Offices__row Offices__margin_bottom">
 					<button className="btn btn__light btn__big" onClick={this.toggleForm}>Add New Office</button>
 					<span>{officesLength} Offices</span>
 				</div>
