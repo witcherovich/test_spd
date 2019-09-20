@@ -77,7 +77,7 @@ class OfficeForm extends Component<OfficeFormProps> {
 					<div className="OfficeForm__form_column">
 						<div className="OfficeForm__form_row">
 							<div className="text__dark OfficeForm__form_label">*Country:</div>
-							<select className={`OfficeForm__form_field ${!country ? 'OfficeForm__form_field_invalid' : ''}`} name="country" value={country} onChange={this.handleInputChange}>
+							<select className={`OfficeForm__form_field ${!country ? 'invalid' : ''}`} name="country" value={country} onChange={this.handleInputChange}>
 								<option value="USA">USA</option>
 								<option value="Canada">Canada</option>
 								<option value="Ukraine">Ukraine</option>
@@ -85,15 +85,15 @@ class OfficeForm extends Component<OfficeFormProps> {
 						</div>
 						<div className="OfficeForm__form_row">
 							<div className="text__dark OfficeForm__form_label">*State/Province:</div>
-							<input className={`OfficeForm__form_field ${!stateOrProvince ? 'OfficeForm__form_field_invalid' : ''}`} autoComplete="off" type="text" name="stateOrProvince" value={stateOrProvince} onChange={this.handleInputChange} />
+							<input className={`OfficeForm__form_field ${!stateOrProvince ? 'invalid' : ''}`} autoComplete="off" type="text" name="stateOrProvince" value={stateOrProvince} onChange={this.handleInputChange} />
 						</div>
 						<div className="OfficeForm__form_row">
 							<div className="text__dark OfficeForm__form_label">*Postal Code:</div>
-							<input className={`OfficeForm__form_field ${!postalCode ? 'OfficeForm__form_field_invalid' : ''}`} autoComplete="off" type="text" name="postalCode" value={postalCode} onChange={this.handleInputChange} />
+							<input className={`OfficeForm__form_field ${!postalCode ? 'invalid' : ''}`} autoComplete="off" type="text" name="postalCode" value={postalCode} onChange={this.handleInputChange} />
 						</div>
 						<div className="OfficeForm__form_row">
 							<div className="text__dark OfficeForm__form_label">*City:</div>
-							<select className={`OfficeForm__form_field ${!city ? 'OfficeForm__form_field_invalid' : ''}`} name="city" value={city} onChange={this.handleInputChange}>
+							<select className={`OfficeForm__form_field ${!city ? 'invalid' : ''}`} name="city" value={city} onChange={this.handleInputChange}>
 								<option value="New York">New York</option>
 								<option value="Toronto">Toronto</option>
 								<option value="Kiev">Kiev</option>
@@ -101,7 +101,7 @@ class OfficeForm extends Component<OfficeFormProps> {
 						</div>
 						<div className="OfficeForm__form_row">
 							<div className="text__dark OfficeForm__form_label">*Street Andress:</div>
-							<input className={`OfficeForm__form_field ${!streetAddress ? 'OfficeForm__form_field_invalid' : ''}`} autoComplete="off" type="text" name="streetAddress" value={streetAddress} onChange={this.handleInputChange} />
+							<input className={`OfficeForm__form_field ${!streetAddress ? 'invalid' : ''}`} autoComplete="off" type="text" name="streetAddress" value={streetAddress} onChange={this.handleInputChange} />
 						</div>
 						<div className="OfficeForm__form_row">
 							<div className="text__dark OfficeForm__form_label">Andress 2:</div>
@@ -134,7 +134,7 @@ class OfficeForm extends Component<OfficeFormProps> {
 						<div className="OfficeForm__form_column OfficeForm__column_margin_left">
 							<div className="OfficeForm__form_row">
 								<button className="btn btn__light" onClick={this.handleCancelClick}>Cancel</button>
-								<input className="btn btn__primary OfficeForm__margin_left" type="submit" value="Save" />
+								<input className="btn btn__primary OfficeForm__btn_margin_left" type="submit" value="Save" />
 							</div>
 						</div>
 					</div>

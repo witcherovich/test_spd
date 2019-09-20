@@ -44,7 +44,7 @@
 	padding-left: 5px;
 }
 
-.OfficeForm__form_field_invalid {
+.OfficeForm__form_field.invalid {
 	border: solid 1px red;
 }
 
@@ -60,6 +60,6 @@
 	margin: 0 8px 0 0;
 }
 
-.OfficeForm__margin_left {
+.OfficeForm__btn_margin_left {
 	margin-left: 10px;	
 }
