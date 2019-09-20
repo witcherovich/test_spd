@@ -7,6 +7,7 @@ import type { OfficesState, OfficesActions } from '../flow-types/officesTypes';
 export type State = Office & OfficesState;
 export type Action = OfficesActions | OfficeFormActions;
 export type ThunkAction = (...args: Array<any>) => (dispatch: Dispatch) => any;
+export type ActionCreator = (...args?: Array<any>) => Action;
 
 export type Store = ReduxStore<State, Action>;
 export type Dispatch = ReduxDispatch<Action | ThunkAction>;

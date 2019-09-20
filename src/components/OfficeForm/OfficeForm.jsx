@@ -1,3 +1,4 @@
+// @flow
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
@@ -10,10 +11,22 @@ import {
 	saveOfficeDB as saveOffice
 } from '../../actionCreators/officesActionCreator';
 
+import type { Action, ThunkAction, ActionCreator } from '../../flow-types';
+import type { Office } from '../../flow-types/officeFormTypes';
+import type { OfficesState } from '../../flow-types/officesTypes';
+
 import './OfficeForm.css';
 
-class OfficeForm extends Component {
-	handleInputChange = e => {
+type OfficeFormProps = {
+	office: Office,
+	saveOffice: ThunkAction,
+	setInitialFormState: ActionCreator,
+	setFormField: ActionCreator,
+	closeForm: () => void
+};
+
+class OfficeForm extends Component<OfficeFormProps> {
+	handleInputChange = (e: SyntheticInputEvent<HTMLInputElement>): void => {
 		const target = e.target;
 		const value = target.type === 'checkbox' ? target.checked : target.value;
     	const name = target.name;
@@ -21,7 +34,7 @@ class OfficeForm extends Component {
 		this.props.setFormField({[name]: value});
 	}
 
-	handleSubmitForm = e => {
+	handleSubmitForm = (e: SyntheticEvent<HTMLFormElement>) => {
 		e.preventDefault();
 
 		if (!this.isFormValid()) {
@@ -33,13 +46,13 @@ class OfficeForm extends Component {
 		this.handleCancelClick();
 	}
 
-	handleCancelClick = e => {
+	handleCancelClick = (e?: SyntheticInputEvent<HTMLButtonElement>): void => {
 		if (e) e.preventDefault();
 		this.props.closeForm();
 		this.props.setInitialFormState();
 	}
 
-	isFormValid = () => {
+	isFormValid = (): boolean => {
 		const { country, stateOrProvince, postalCode, city, streetAddress } = this.props.office;
 
 		return !!(country && stateOrProvince && postalCode && city && streetAddress);
