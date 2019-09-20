@@ -7,7 +7,7 @@ import './Footer.css';
 export default function Footer(props) {
 	return (
 		<div className="Footer">
-      <div className="Footer__left OfficeItem__column_wrapper">
+      <div className="Footer__left">
 				<button className="btn btn__light btn__big">Back</button>
 				<div className="Footer__margin_left Footer__center"><img className="OfficeItem__img" alt="Cross" src={cross} />Provide additional comments</div>
       </div>
