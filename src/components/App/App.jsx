@@ -3,10 +3,13 @@ import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { 
-  removeOfficeDB as removeOffice, 
   setFormState, 
-  fetchOfficesDB as fetchOffices 
-} from '../../actionCreators';
+} from '../../actionCreators/officeFormActionCreator';
+import {
+  removeOfficeDB as removeOffice, 
+  fetchOfficesDB as fetchOffices   
+} from '../../actionCreators/officesActionCreator';
+
 import { isString } from '../../helperFunctions';
 
 import Header from '../Header/Header';

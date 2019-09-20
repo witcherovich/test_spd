@@ -3,10 +3,12 @@ import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { 
-	saveOfficeDB as saveOffice, 
 	setInitialFormState, 
 	setFormField
-} from '../../actionCreators';
+} from '../../actionCreators/officeFormActionCreator';
+import {
+	saveOfficeDB as saveOffice
+} from '../../actionCreators/officesActionCreator';
 
 import './OfficeForm.css';
 

@@ -1,5 +1,5 @@
 // @flow
-import { SET_INITIAL_FORM_STATE, SET_FORM_STATE, SET_FORM_FIELD } from '../actionCreators';
+import { SET_INITIAL_FORM_STATE, SET_FORM_STATE, SET_FORM_FIELD } from '../actionCreators/officeFormActionCreator';
 import type { Office, OfficeFormActions } from '../flow-types/officeFormTypes';
 
 const initialFormState: Office = {
