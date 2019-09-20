@@ -87,7 +87,7 @@ export default function OfficeItem(props: OfficeItemProps) {
 			<div className="OfficeItem__column">
 				<div className="OfficeItem__row">
 					<button className="btn" onClick={handleRemoveOffice}>Remove</button>
-					<button className="btn btn__primary OfficeForm__margin_left" onClick={handleEditOffice}>Edit</button>
+					<button className="btn btn__primary OfficeItem__btn_margin_left" onClick={handleEditOffice}>Edit</button>
 				</div>
 			</div>
 		</div>
