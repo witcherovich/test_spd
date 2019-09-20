@@ -1,3 +1,4 @@
+// @flow
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { bindActionCreators } from 'redux';
@@ -9,8 +10,11 @@ import {
   removeOfficeDB as removeOffice, 
   fetchOfficesDB as fetchOffices   
 } from '../../actionCreators/officesActionCreator';
-
 import { isString } from '../../helperFunctions';
+
+import type { ThunkAction } from '../../flow-types';
+import type { Office } from '../../flow-types/officeFormTypes';
+import type { OfficesState } from '../../flow-types/officesTypes';
 
 import Header from '../Header/Header';
 import Panel from '../Panel/Panel';
@@ -21,7 +25,17 @@ import OfficeList from '../OfficeList/OfficeList';
 
 import './App.css';
 
-class App extends Component {
+type AppProps = {
+  offices: OfficesState,
+  removeOffice: ThunkAction,
+  editOffice: ThunkAction,
+  fetchOffices: ThunkAction
+};
+type AppState = {
+  isFormOpen: boolean
+};
+
+class App extends Component<AppProps, AppState> {
   state = {
     isFormOpen: false
   }
@@ -38,7 +52,7 @@ class App extends Component {
     this.setState({ isFormOpen: false });
   }
 
-  handleEditOffice = office => {
+  handleEditOffice = (office: Office): void => {
     if (!(office && office.hasOwnProperty('id') && isString(office.id))) {
       alert('Something went wrong.');
       return;
@@ -48,7 +62,7 @@ class App extends Component {
     this.props.editOffice(office);
   }
 
-  handleRemoveOffice = officeId => {
+  handleRemoveOffice = (officeId: string): void => {
     if (!(officeId && isString(officeId))) {
       alert('Something went wrong.');
       return;
