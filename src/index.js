@@ -5,6 +5,7 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import { Provider } from 'react-redux';
 import mainReducer from './reducers/';
+
 import type { Store } from './flow-types';
 
 import App from './components/App/App.jsx';
