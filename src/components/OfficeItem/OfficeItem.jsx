@@ -1,9 +1,7 @@
 // @flow
 import React from 'react';
 
-import type { Action, ThunkAction, ActionCreator } from '../../flow-types';
 import type { Office } from '../../flow-types/officeFormTypes';
-import type { OfficesState } from '../../flow-types/officesTypes';
 
 import checkMark from '../../images/checkMark.jpg';
 
@@ -11,8 +9,8 @@ import './OfficeItem.css';
 
 type OfficeItemProps = {
 	office: Office,
-	editOffice: ThunkAction,
-	removeOffice: ThunkAction
+	editOffice: (office: Office) => void,
+	removeOffice: (officeId: string) => void
 }
 
 export default function OfficeItem(props: OfficeItemProps) {
@@ -33,7 +31,7 @@ export default function OfficeItem(props: OfficeItemProps) {
 	function handleRemoveOffice(): void {
 		const needToRemoveOffice = window.confirm("Press 'OK' to remove office.");
 		
-		if (needToRemoveOffice) {
+		if (needToRemoveOffice && id !== null) {
 			props.removeOffice(id);
 		}
 	}
