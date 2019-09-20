@@ -20,7 +20,10 @@ export const fetchOfficesDB = () => (dispatch: Dispatch): void => {
 		.catch(() => alert('Service Unavailable error message'));
 }
 
+// This function is for adding new office and for editing existing 
 export const saveOfficeDB = (office: Office): any => (dispatch: Dispatch): void => {
+	// If office id is present then office is already exists and we need to edit it
+	// If not then we created new office
 	const isEditMode = !!office.id;
 
 	const officeId = office.id || db.child('offices').push().key;
