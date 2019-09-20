@@ -5,11 +5,11 @@ import { bindActionCreators } from 'redux';
 import { connect } from 'react-redux';
 import { 
   setFormState, 
-} from '../../actionCreators/officeFormActionCreator';
+} from '../../actions/officeFormActions';
 import {
   removeOfficeDB as removeOffice, 
   fetchOfficesDB as fetchOffices   
-} from '../../actionCreators/officesActionCreator';
+} from '../../actions/officesActions';
 import { isString } from '../../helperFunctions';
 
 import type { ThunkAction } from '../../flow-types';

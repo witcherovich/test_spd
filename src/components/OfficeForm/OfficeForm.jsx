@@ -6,10 +6,10 @@ import { connect } from 'react-redux';
 import { 
 	setInitialFormState, 
 	setFormField
-} from '../../actionCreators/officeFormActionCreator';
+} from '../../actions/officeFormActions';
 import {
 	saveOfficeDB as saveOffice
-} from '../../actionCreators/officesActionCreator';
+} from '../../actions/officesActions';
 
 import type { ThunkAction, ActionCreator } from '../../flow-types';
 import type { Office } from '../../flow-types/officeFormTypes';

@@ -1,5 +1,5 @@
 // @flow
-import { SET_OFFICES, ADD_OFFICE, EDIT_OFFICE, REMOVE_OFFICE } from '../actionCreators/officesActionCreator';
+import { SET_OFFICES, ADD_OFFICE, EDIT_OFFICE, REMOVE_OFFICE } from '../actions/officesActions';
 import type { OfficesState, OfficesActions } from '../flow-types/officesTypes';
 
 const officesInitialState: OfficesState = [];
