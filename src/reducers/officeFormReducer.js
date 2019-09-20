@@ -1,6 +1,8 @@
+// @flow
 import { SET_INITIAL_FORM_STATE, SET_FORM_STATE, SET_FORM_FIELD } from '../actionCreators';
+import type { Office, OfficeFormActions } from '../flow-types/officeFormTypes';
 
-const initialFormState = {
+const initialFormState: Office = {
 	id: null,
 	country: 'USA',
 	stateOrProvince: '',
@@ -14,17 +16,17 @@ const initialFormState = {
 	officeType: false 
 };
 
-export default function officeFormReducer(state = initialFormState, { type, payload }) {
-	switch(type) {
+export default function officeFormReducer(state: Office = initialFormState, action: OfficeFormActions): Office {
+	switch(action.type) {
 		case SET_FORM_STATE:
-			const formState = payload.office;
+			const formState = action.payload.office;
 			return {...state, ...formState};
 
 		case SET_INITIAL_FORM_STATE:
 			return {...initialFormState};
 
 		case SET_FORM_FIELD:
-			const field = payload.field;
+			const field = action.payload.field;
 			return {...state, ...field}
 
 		default:

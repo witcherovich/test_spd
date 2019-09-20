@@ -1,24 +1,28 @@
+// @flow
 import { SET_OFFICES, ADD_OFFICE, EDIT_OFFICE, REMOVE_OFFICE } from '../actionCreators';
+import type { OfficesState, OfficesActions } from '../flow-types/officesTypes';
 
-export default function officesReducer(state = [], { type, payload }) {
-	switch(type) {
+const officesInitialState: OfficesState = [];
+
+export default function officesReducer(state: OfficesState = officesInitialState, action: OfficesActions): OfficesState {
+	switch(action.type) {
 		case SET_OFFICES:
-			const offices = payload.offices;
+			const offices = action.payload.offices;
 			return [...state, ...offices];
 
 		case ADD_OFFICE:
-			const office = payload.office;
+			const office = action.payload.office;
 			return [...state, office];
 
 		case EDIT_OFFICE:
-			const editedOffice = payload.office;
+			const editedOffice = action.payload.office;
 			return state.map(office => 
 				editedOffice.id === office.id ? 
 					{...office, ...editedOffice} : office
 			);
 
 		case REMOVE_OFFICE:
-			const officeId = payload.officeId;
+			const officeId = action.payload.officeId;
 			return state.filter(office => office.id !== officeId);
 
 		default:
