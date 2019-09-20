@@ -1,0 +1,12 @@
+.Offices {
+  height: 100%;
+}
+
+.Offices_row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Offices_margin_bottom {
+  margin-bottom: 18px;
+}

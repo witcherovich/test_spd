@@ -36,20 +36,6 @@
   box-sizing: border-box;
 }
 
-/* Office styles */
-.App__office {
-  height: 100%;
-}
-
-.App__office_row {
-  display: flex;
-  justify-content: space-between;
-}
-
-.App__office_margin_bottom {
-  margin-bottom: 18px;
-}
-
 .App__horizontal_line_dotten {
   border: 1px dotted #b7bdc5;
   margin: 35px 0;
