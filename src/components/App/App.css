@@ -2,15 +2,16 @@
   position: fixed;
   top: 0;
   bottom: 0;
-  right: 0;
   left: 0;
-  height: calc(100% - 64px);
+  right: 0;
+  min-height: 100%;
+  overflow-y: auto;
 }
 
 /* Body styles */
 .App__body {
   position: relative;
-  height: 100%;
+  min-height: 100%;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -38,7 +39,6 @@
 /* Office styles */
 .App__office {
   height: 100%;
-  overflow-y: auto;
 }
 
 .App__office_row {
