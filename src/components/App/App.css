@@ -8,8 +8,8 @@
   overflow-y: auto;
 }
 
-/* Body styles */
-.App__body {
+/* Content styles */
+.App__content {
   position: relative;
   min-height: 100%;
   width: 100%;
@@ -20,14 +20,14 @@
   box-sizing: border-box;
 }
 
-.App__body_left {
+.App__content_left {
   width: 219px;
   border: solid 1px #ffffff;
   background-color: #e9f0f5;
   box-sizing: border-box;
 }
 
-.App__body_right {
+.App__content_right {
   width: 100%;
   display: flex;
   flex-direction: column;

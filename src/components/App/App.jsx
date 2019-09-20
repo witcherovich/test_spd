@@ -9,21 +9,21 @@ import Offices from '../Offices/Offices';
 import './App.css';
 
 export default function App(props) {
-  return (
-    <div className="App">
-      <Header />
-      <div className="App__body">
-        <div className="App__body_left">
-          <Panel />
+    return (
+        <div className="App">
+            <Header />
+            <div className="App__content">
+                <div className="App__content_left">
+                    <Panel />
+                </div>
+                <div className="App__content_right">
+                    <Title />
+                    <hr className="App__horizontal_line_dotten" />
+                    <Offices />
+                    <hr className="App__horizontal_line_dotten" />
+                    <Footer />
+                </div>
+            </div>
         </div>
-        <div className="App__body_right">
-          <Title />
-          <hr className="App__horizontal_line_dotten" />
-          <Offices />
-          <hr className="App__horizontal_line_dotten" />
-          <Footer />
-        </div>
-      </div>
-    </div>
-  );
+    );
 }
