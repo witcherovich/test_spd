@@ -11,9 +11,8 @@ import {
 	saveOfficeDB as saveOffice
 } from '../../actionCreators/officesActionCreator';
 
-import type { Action, ThunkAction, ActionCreator } from '../../flow-types';
+import type { ThunkAction, ActionCreator } from '../../flow-types';
 import type { Office } from '../../flow-types/officeFormTypes';
-import type { OfficesState } from '../../flow-types/officesTypes';
 
 import './OfficeForm.css';
 
