@@ -9,7 +9,14 @@ export default function Panel(props) {
 	return (
 		<div className="Panel">
             <div className="Panel__top">
-              	<img alt="Indicator" src={indicator} />
+              	<div className="Panel__circle"></div>
+              	<div className="Panel__circle Panel__circle_sector"></div>
+              	<div className="Panel__circle Panel__circle_small">
+              		<div className="Panel__circle_text">
+	              		<span className="Panel__circle_text_big">2</span>
+	              		<span className="Panel__circle_text_small">/ 8</span>
+              		</div>
+              	</div>
             </div>
             <div className="Panel__body">
 				<div className="Panel__row">

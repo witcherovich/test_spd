@@ -7,6 +7,47 @@
   background: #175786;
 }
 
+.Panel__circle {
+  position: absolute;
+  width: 112px;
+  height: 112px;
+  border-radius: 50%;
+  background: #84a5bf;
+  z-index: 1;
+}
+
+.Panel__circle_sector {
+  clip-path: polygon(50% 0%, 100% 0%, 100% 50%, 50% 50%);
+  background: white;
+  z-index: 2;
+}
+
+.Panel__circle_small {
+  width: 95px;
+  height: 95px;
+  background: #175786;
+  z-index: 3;
+}
+
+.Panel__circle_text {
+  width: inherit;
+  height: inherit;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.Panel__circle_text_big {
+  font-size: 33px;
+}
+
+.Panel__circle_text_small {
+  font-size: 18px;
+  margin-bottom: 11px;
+  margin-left: 5px;
+}
+
 .Panel__row {
   min-height: 50px;
   border-bottom: 1px solid #d8dde3;
