@@ -30,6 +30,10 @@ class OfficeForm extends Component<OfficeFormProps> {
 		const value = target.type === 'checkbox' ? target.checked : target.value;
     	const name = target.name;
 		
+		if (!this.props.office.hasOwnProperty(name)) {
+			throw new Error(`Offce object doesn't have property "${name}"`);
+		}
+
 		this.props.setFormField({[name]: value});
 	}
 
