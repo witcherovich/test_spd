@@ -1,6 +1,5 @@
 import React from 'react';
 
-import indicator from '../../images/indicator.svg'
 import checkMarkGrey from '../../images/checkMarkGrey.jpg';
 
 import './Panel.css';
