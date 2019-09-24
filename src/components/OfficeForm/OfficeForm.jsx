@@ -31,7 +31,10 @@ class OfficeForm extends Component<OfficeFormProps> {
     	const name = target.name;
 		
 		if (!this.props.office.hasOwnProperty(name)) {
-			throw new Error(`Offce object doesn't have property "${name}"`);
+			// When there is no name field in office object
+			// this field doesn't went to the store for prevent saving useless data 
+			alert(`Offce object doesn't have property "${name}"`);
+			return;
 		}
 
 		this.props.setFormField({[name]: value});
